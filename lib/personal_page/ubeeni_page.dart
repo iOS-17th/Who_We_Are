@@ -12,19 +12,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: QnAPage(),
     );
   }
 }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class QnAPage extends StatefulWidget {
+  const QnAPage({Key? key}) : super(key: key);
 
   @override
   HomeScreenState createState() => HomeScreenState();
 }
 
-class HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends State<QnAPage> {
   final List<String> questions = [
     '나에 대한 설명',
     '객관적으로 살펴 본\n자신의 장점은?',

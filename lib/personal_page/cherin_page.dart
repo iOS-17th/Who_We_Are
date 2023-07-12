@@ -14,19 +14,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePageWidget(),
+      home: PracticumPage(),
     );
   }
 }
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class PracticumPage extends StatefulWidget {
+  const PracticumPage({Key? key}) : super(key: key);
 
   @override
   _HomePageWidgetState createState() => _HomePageWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _HomePageWidgetState extends State<PracticumPage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override

@@ -1,5 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:who_we_are/personal_page/cherin_page.dart';
+import 'package:who_we_are/personal_page/ubeeni_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,17 +13,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePageWidget(),
+      routes: {
+        '/team-leader': (context) => TeamLeaderPage(),
+        '/sub-leader': (context) => SubLeaderPage(),
+        '/presenter': (context) => PresenterPage(),
+        //'/qna': (context) => QnAPage(),
+        '/qna': (context) => QnAPage(),
+        '/practicum': (context) => PracticumPage()
+      },
     );
   }
 }
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
-  @override
-  HomePageWidgetState createState() => HomePageWidgetState();
-}
-
-class HomePageWidgetState extends State<HomePageWidget> {
+class HomePageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,15 +78,106 @@ class HomePageWidgetState extends State<HomePageWidget> {
                   shape: BoxShape.rectangle,
                 ),
                 alignment: AlignmentDirectional(-1, 1),
-                child: Align(
-                  alignment: AlignmentDirectional(-0.8, 0),
-                  child: Text(
-                    '대표팀장 : 김현승\n\n부팀장 : 윤혁진\n\n발표담당 : 박서영\n\n질문답변담당 : 김유빈\n\n실습담당 : 박세찬\n',
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/team-leader');
+                        },
+                        child: Text(
+                          '대표팀장 : 김현승',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          alignment: AlignmentDirectional(-0.8, 0),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/sub-leader');
+                        },
+                        child: Text(
+                          '부팀장 : 윤혁진',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          alignment: AlignmentDirectional(-0.8, 0),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/presenter');
+                        },
+                        child: Text(
+                          '발표담당 : 박서영',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          alignment: AlignmentDirectional(-0.8, 0),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/qna');
+                        },
+                        child: Text(
+                          '질문답변담당 : 김유빈',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          alignment: AlignmentDirectional(-0.8, 0),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/practicum');
+                        },
+                        child: Text(
+                          '실습담당 : 박세찬',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          alignment: AlignmentDirectional(-0.8, 0),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -127,6 +221,48 @@ class HomePageWidgetState extends State<HomePageWidget> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class TeamLeaderPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('대표팀장'),
+      ),
+      body: Center(
+        child: Text('대표팀장 페이지'),
+      ),
+    );
+  }
+}
+
+class SubLeaderPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('부팀장'),
+      ),
+      body: Center(
+        child: Text('부팀장 페이지'),
+      ),
+    );
+  }
+}
+
+class PresenterPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('발표담당'),
+      ),
+      body: Center(
+        child: Text('발표담당 페이지'),
       ),
     );
   }
