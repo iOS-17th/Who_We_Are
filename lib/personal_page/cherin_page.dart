@@ -48,7 +48,7 @@ class _HomePageWidgetState extends State<PracticumPage> {
                 '제 이름은 박세찬입니다 ! 잘 부탁드립니다 !\n아래 카드를 눌러보세요 ! \n제 TMI들이 나올거에요 !',
                 textAlign: TextAlign.end,
                 maxLines: 4,
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 15, color: Colors.black),
               ),
             ),
             actions: [],
