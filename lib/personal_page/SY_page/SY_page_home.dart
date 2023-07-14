@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'SY_page_feed.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key}); // 생성자
+class PresenterPage extends StatelessWidget {
+  const PresenterPage({super.key}); // 생성자
   @override
   Widget build(BuildContext context) {
     final List<String> images = [

@@ -13,13 +13,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Robota'),
       themeMode: ThemeMode.system,
-      home: const FirstPage(),
+      home: const SubLeaderPage(),
     );
   }
 }
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({Key? key}) : super(key: key);
+class SubLeaderPage extends StatelessWidget {
+  const SubLeaderPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,8 @@ class FirstPage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SecondPage()),
+                MaterialPageRoute(
+                    builder: (context) => const SubLeaderPage_SecondPage()),
               );
             },
           ),
@@ -49,8 +50,8 @@ class FirstPage extends StatelessWidget {
   }
 }
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({Key? key}) : super(key: key);
+class SubLeaderPage_SecondPage extends StatelessWidget {
+  const SubLeaderPage_SecondPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

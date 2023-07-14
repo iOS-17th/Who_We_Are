@@ -12,18 +12,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePageWidget(),
+      home: TeamLeaderPage(),
     );
   }
 }
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class TeamLeaderPage extends StatefulWidget {
+  const TeamLeaderPage({Key? key}) : super(key: key);
   @override
   HomePageWidgetState createState() => HomePageWidgetState();
 }
 
-class HomePageWidgetState extends State<HomePageWidget> {
+class HomePageWidgetState extends State<TeamLeaderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

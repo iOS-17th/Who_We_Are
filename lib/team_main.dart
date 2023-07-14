@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:who_we_are/personal_page/HJ_page.dart';
+import 'package:who_we_are/personal_page/SY_page/SY_page_home.dart';
 import 'package:who_we_are/personal_page/cherin_page.dart';
+import 'package:who_we_are/personal_page/khseung_page.dart';
 import 'package:who_we_are/personal_page/ubeeni_page.dart';
 
 void main() {
@@ -221,48 +224,6 @@ class HomePageWidget extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class TeamLeaderPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('대표팀장'),
-      ),
-      body: Center(
-        child: Text('대표팀장 페이지'),
-      ),
-    );
-  }
-}
-
-class SubLeaderPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('부팀장'),
-      ),
-      body: Center(
-        child: Text('부팀장 페이지'),
-      ),
-    );
-  }
-}
-
-class PresenterPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('발표담당'),
-      ),
-      body: Center(
-        child: Text('발표담당 페이지'),
       ),
     );
   }
